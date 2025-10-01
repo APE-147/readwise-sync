@@ -1,0 +1,47 @@
+# Example runtime config for reader-sync
+# Copy to `.rw-sync.yaml` and adjust as needed. This file is safe to commit.
+
+watch:
+  # Directory to watch for new HTML files. Use absolute or project-relative path.
+  dir: ./inbox
+  patterns:
+    - "*.html"
+    - "*.htm"
+
+state:
+  # SQLite DB for incremental state.
+  db_path: ./data/state/rw_sync.db
+
+network:
+  concurrency: 6
+  title_fetch_timeout: 3.0
+  rpm_save: 50
+  rpm_update: 50
+
+readwise:
+  should_clean_html: true
+  default_category: article
+
+url_norm:
+  keep_params:
+    - id
+    - p
+    - page
+    - s
+    - v
+    - t
+    - q
+  drop_params:
+    - utm_
+    - gclid
+    - fbclid
+    - mkt_tok
+    - mc_cid
+    - mc_eid
+    - yclid
+    - spm
+    - ref
+
+# Notes:
+# - Secrets such as READWISE_TOKEN must be provided via environment or .env (not here).
+# - You may also set RW_SYNC_WATCH_DIR and RW_SYNC_DB_PATH in .env to override paths.
