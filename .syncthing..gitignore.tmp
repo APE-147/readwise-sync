@@ -1,0 +1,73 @@
+# Python runtime artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Environment & Secrets
+.env
+.env.*
+*.env
+.secret*
+secrets.*
+
+# But allow example files
+!.env.example
+!.rw-sync.example.yaml
+
+# Testing & Development
+.pytest_cache/
+.mypy_cache/
+.coverage
+.tox/
+.cache/
+.venv/
+venv/
+env/
+
+# Project data folders (contains personal HTML files & databases)
+/data/
+.data/
+.data
+
+# Local runtime config (contains user-specific file paths)
+.rw-sync.yaml
+
+# IDE & System
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Additional security-sensitive patterns
+*.pem
+*.key
+id_rsa
+id_rsa.*
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.gpg
+*.asc
+*.der
+*.kdbx
+secrets.*
+credentials.*
+dumps/
+backups/
+exports/
+data/
+
