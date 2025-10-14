@@ -50,3 +50,24 @@ env/
 # Logs
 *.log
 logs/
+
+# Additional security-sensitive patterns
+*.pem
+*.key
+id_rsa
+id_rsa.*
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.gpg
+*.asc
+*.der
+*.kdbx
+secrets.*
+credentials.*
+dumps/
+backups/
+exports/
+data/
+
